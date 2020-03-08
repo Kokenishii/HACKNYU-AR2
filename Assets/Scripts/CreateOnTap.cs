@@ -8,10 +8,10 @@ using UnityEngine.XR.ARSubsystems;
 public class CreateOnTap : MonoBehaviour
 {
     public GameObject prefabObj;
-    GameObject createdObj;
-    ARRaycastManager _raymanager;
+    private GameObject createdObj;
+    private ARRaycastManager _raymanager;
     Vector2 touchPoint = new Vector2();
-    List<ARRaycastHit> hits = new List<ARRaycastHit>();
+    private List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
     // Start is called before the first frame update
     private void Awake()
@@ -19,11 +19,7 @@ public class CreateOnTap : MonoBehaviour
         _raymanager = GetComponent<ARRaycastManager>();
 
     }
-    void Start()
-    {
-        
-    }
-
+   
     bool GetPos(out Vector2 touchPoint)
     {
         if (Input.touchCount > 0)
