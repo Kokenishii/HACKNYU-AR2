@@ -13,7 +13,11 @@ public class CreateOnTap : MonoBehaviour
     Vector2 touchPoint = new Vector2();
     private List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
-    // Start is called before the first frame update
+    // Start is called before the first frame updateoi
+    private void Start()
+    {
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
+    }
     private void Awake()
     {
         _raymanager = GetComponent<ARRaycastManager>();
